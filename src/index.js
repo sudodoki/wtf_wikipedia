@@ -211,7 +211,8 @@ var wtf_wikipedia = (function() {
     var data = main(str) || {};
     data.text = data.text || [];
     var text = '';
-    data.text.forEach(function (v) {
+    data.text.forEach(function (v, k) {
+      text += k + '\n';
       text += v.map(function(a) {
           return a.text;
         }).join(' ') + '\n';
